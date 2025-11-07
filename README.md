@@ -1,0 +1,8 @@
+Project Goal
+The goal of this project was to conduct a security incident investigation on a workstation within a client's network to identify signs of compromise. My task was to analyze data in Splunk to identify malicious activity and document the attacker's actions.
+
+Project Description
+As part of this project, I performed a detailed analysis of endpoint log events belonging to the user Finance01. Using the Splunk platform, I identified the execution of suspicious binary files, such as a "Web Browser Password Viewer" from NirSoft (11111.exe) and the IonicLarge.exe malware, which was disguised as PalitExplorer.exe. I discovered their network connections to a known malicious IP address, as well as manipulations of the Windows Registry to disable Windows Defender protections. Analysis of the command line and PowerShell events allowed me to reconstruct the sequence of the attacker's commands used to add exceptions to the antivirus. Furthermore, I identified the use of the taskkill utility to remove traces and another malicious binary, EasyCalc.exe, which operated from the AppData\Roaming folder and loaded third-party DLL libraries.
+
+Conclusion
+As a result of the investigation, I successfully identified several stages of the attack, including credential theft, persistence within the system, disabling of security systems, and communication with a command-and-control server. The project demonstrated the effectiveness of using Splunk for threat hunting and highlighted the critical importance of monitoring activity in AppData folders and registry changes for the timely detection of a compromise.
